@@ -16,6 +16,8 @@ It will be developed soon by me and the developers who wants to contribute to th
 Therefore, any good ideas and nice suggestions which can promote this project more better are very welcomed and any PRs are fine too.
 I am really open minded and I would like to hear about other developers suggestions and recommendations.
 
+**Please don't forget tapping star button above to encourage me. Thanks**
+
 # Content
 
 - [Introduction](#introduction)
