@@ -21,7 +21,6 @@ I am really open minded and I would like to hear about other developers suggesti
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Dependencies](#dependencies)
-- [Technologies](#technologies)
 - [TODO](#todo)
 - [FAQ](#faq)
 
