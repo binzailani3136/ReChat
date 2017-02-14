@@ -16,15 +16,26 @@ It will be developed soon by me and the developers who wants to contribute to th
 Therefore, any good ideas and nice suggestions which can promote this project more better are very welcomed and any PRs are fine too.
 I am really open minded and I would like to hear about other developers suggestions and recommendations.
 
-# Brief Introduction
-- All dependencies used in this project are latest versions.
+# Content
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [Technologies](#technologies)
+- [TODO](#todo)
+- [FAQ](#faq)
+
+## Introduction
+- The app runs on **BOTH** iOS & Android and uses a single codebase which is mostly written in Javascript.
+- All dependencies used in this project are latest versions and I will frequently upgrade it's versions.
 - Uses ES6
 - Uses ESLint Airbnb syntax.
 - Uses Redux+Sagas for state management and asynchronous actions.
 - Easy routing and navigation with Redux+Navigator.
 - I18n MultiLanguage support.
+- Easy to change app theme by configuring theme files.
 
-# Installation
+## Installation
 * [Install React-Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
 * `git clone https://github.com/binzailani3136/ReChat.git`
 * `cd ReChat`
@@ -32,7 +43,7 @@ I am really open minded and I would like to hear about other developers suggesti
 * `react-native link`
 * `react-native run-ios` or `react-native run-android`
 
-# Dependencies
+## Dependencies
 *  "firebase": "^3.6.9",
 *  "immutable": "^3.8.1",
 *  "react": "~15.4.0",
@@ -48,3 +59,17 @@ I am really open minded and I would like to hear about other developers suggesti
 *  "redux-saga": "^0.14.3",
 *  "reduxsauce": "^0.4.1",
 *  "seamless-immutable": "^7.0.1"
+
+## TODO
+* Login, Register implementation with firebase.
+* Contact List.
+* 1:1 Realtime Chat.
+* Discover friends.
+* My profile management.
+* UI design improvements.
+
+## FAQ
+### Can you change the app design and flow depend on the suggestions?
+Yes. Nice ideas and suggestions are very welcomed and I have the will to change my current design depend on other developers suggestions. Suggest me nice ideas!
+### Do you accept PR's?
+Yes. This project is actively under development and PR's are much appreciated.
