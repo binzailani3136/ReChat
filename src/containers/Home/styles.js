@@ -13,8 +13,8 @@ export default StyleSheet.create({
   },
   badgeContainer: {
     ...Styles.center,
-    marginTop: 17,
-    marginRight: 5,
+    marginTop: 15,
+    marginRight: 3,
     width: 14,
     height: 14,
     backgroundColor: Colors.brandDanger,
