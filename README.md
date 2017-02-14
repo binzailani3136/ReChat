@@ -28,7 +28,7 @@ I am really open minded and I would like to hear about other developers suggesti
 - [FAQ](#faq)
 
 ## Introduction
-- The app runs on **BOTH** iOS & Android and uses a single codebase which is mostly written in Javascript.
+- This app runs on **BOTH** iOS & Android and uses a single codebase which is mostly written in Javascript.
 - All dependencies used in this project are latest versions and I will frequently upgrade it's versions.
 - Uses ES6
 - Uses ESLint Airbnb syntax.
