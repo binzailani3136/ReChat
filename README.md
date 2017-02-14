@@ -29,21 +29,22 @@ I am really open minded and I would like to hear about other developers suggesti
 * `git clone https://github.com/binzailani3136/ReChat.git`
 * `cd ReChat`
 * `yarn`
+* `react-native link`
 * `react-native run-ios` or `react-native run-android`
 
 # Dependencies
-  "firebase": "^3.6.9",
-  "immutable": "^3.8.1",
-  "react": "~15.4.0",
-  "react-native": "0.41.2",
-  "react-native-elements": "^0.9.6",
-  "react-native-i18n": "^1.0.0",
-  "react-native-keyboard-aware-scroll-view": "^0.2.7",
-  "react-native-vector-icons": "^4.0.0",
-  "react-redux": "^5.0.2",
-  "redux": "^3.6.0",
-  "redux-immutable": "^3.0.11",
-  "redux-persist": "^4.3.1",
-  "redux-saga": "^0.14.3",
-  "reduxsauce": "^0.4.1",
-  "seamless-immutable": "^7.0.1"
+*  "firebase": "^3.6.9",
+*  "immutable": "^3.8.1",
+*  "react": "~15.4.0",
+*  "react-native": "0.41.2",
+*  "react-native-elements": "^0.9.6",
+*  "react-native-i18n": "^1.0.0",
+*  "react-native-keyboard-aware-scroll-view": "^0.2.7",
+*  "react-native-vector-icons": "^4.0.0",
+*  "react-redux": "^5.0.2",
+*  "redux": "^3.6.0",
+*  "redux-immutable": "^3.0.11",
+*  "redux-persist": "^4.3.1",
+*  "redux-saga": "^0.14.3",
+*  "reduxsauce": "^0.4.1",
+*  "seamless-immutable": "^7.0.1"
