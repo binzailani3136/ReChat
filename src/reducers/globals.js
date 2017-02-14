@@ -3,7 +3,7 @@ import { createReducer } from 'reduxsauce';
 import Types from '@actions/actionTypes';
 
 export const initialState = Immutable({
-  homeTab: 'notifications',
+  homeTab: 'chats',
   projectTab: 'list', // list, main, chart, report
 });
 const homeTab = (state, action) => ({

@@ -2,15 +2,16 @@ import { Text, TextInput, Image, View, TouchableOpacity, Alert } from 'react-nat
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import Icon from 'react-native-vector-icons/Ionicons';
 import I18n from 'react-native-i18n';
 
-import { replaceRoute, pushNewRoute } from '@actions/route';
+import { replaceRoute, popRoute } from '@actions/route';
 
 import { Metrics, Styles, Images, Colors } from '@theme/';
 import styles from './styles';
 import { firebaseApp } from '@src/firebase';
 
-class Login extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,13 +23,13 @@ class Login extends Component {
   replaceRoute(route) {
     this.props.replaceRoute(route);
   }
-  pushNewRoute(route) {
-    this.props.pushNewRoute(route);
+  popRoute(route) {
+    this.props.popRoute();
   }
 
   doLogin() {
     // TODO: Now it signups to firebase instead of signin
-    /*firebaseApp.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+    firebaseApp.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then((user) => {
         Alert.alert('Firebase_Signup_Succeed!', 'RefreshToken : ' + user.refreshToken);
         this.replaceRoute('home');
@@ -36,8 +37,7 @@ class Login extends Component {
       .catch((error) => {
         Alert.alert('signup_error', error.message);
         // this.replaceRoute('home');
-      });*/
-    this.replaceRoute('home');
+      });
   }
   render() {
     const spacer = (<View style={{ height: Metrics.screenHeight / 40 }} />);
@@ -58,6 +58,13 @@ class Login extends Component {
                 {I18n.t('APP_NAME')}
               </Text>
             </View>
+            <Icon
+              name="md-close"
+              size={35}
+              color={Colors.textSecondary}
+              style={styles.closeButton}
+              onPress={() => this.popRoute()}
+            />
           </View>
           <View style={{ flex: 5, alignItems: 'center' }}>
             <TextInput
@@ -81,6 +88,19 @@ class Login extends Component {
               secureTextEntry
               onChangeText={text => this.setState({ password: text })}
               returnKeyType={'go'}
+              onSubmitEditing={() => this.refs.username.focus()}
+            />
+            {spacer}
+            <TextInput
+              ref={'username'}
+              style={[styles.textInputStyle]}
+              underlineColorAndroid={'transparent'}
+              placeholder={I18n.t('USER_NAME')}
+              placeholderTextColor={Colors.textSecondary}
+              multiline={false}
+              secureTextEntry
+              onChangeText={text => this.setState({ password: text })}
+              returnKeyType={'go'}
               onSubmitEditing={() => alert('go')}
             />
             {spacer}
@@ -89,19 +109,9 @@ class Login extends Component {
               onPress={() => this.doLogin()}
             >
               <Text style={Styles.buttonTextStyle}>
-                {I18n.t('LOGIN')}
+                {I18n.t('CREATE_ACCOUNT')}
               </Text>
             </TouchableOpacity>
-            <View style={styles.signUpBtnContainer}>
-              <Text style={styles.signUpDescStyle}>
-                {I18n.t('DONT_HAVE_ACCOUNT')}
-              </Text>
-              <TouchableOpacity onPress={() => this.pushNewRoute('register')}>
-                <Text style={styles.signUpButtonStyle}>
-                  {I18n.t('CREATE_ONE')}
-                </Text>
-              </TouchableOpacity>
-            </View>
           </View>
         </View>
       </KeyboardAwareScrollView>
@@ -109,18 +119,18 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
+Register.propTypes = {
   replaceRoute: React.PropTypes.func.isRequired,
-  pushNewRoute: React.PropTypes.func.isRequired,
+  popRoute: React.PropTypes.func.isRequired,
 };
 
 function mapDispatchToProps(dispatch) {
   return {
     replaceRoute: route => dispatch(replaceRoute(route)),
-    pushNewRoute: route => dispatch(pushNewRoute(route)),
+    popRoute: () => dispatch(popRoute()),
   };
 }
 function mapStateToProps(state) {
   return { };
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

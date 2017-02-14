@@ -1,6 +1,14 @@
 {
-   "APP_NAME": "Free Chat",
+   "APP_NAME": "ReChat",
    "USER_NAME": "User name",
+   "EMAIL": "Email",
    "PASSWORD": "Password",
-   "LOGIN": "LOGIN"
+   "LOGIN": "LOGIN",
+   "DONT_HAVE_ACCOUNT": "Don't have an account?",
+   "CREATE_ONE": "Create one",
+   "CREATE_ACCOUNT": "CREATE ACCOUNT",
+   "CHATS": "Chats",
+   "CONTACTS": "Contacts",
+   "DISCOVER": "Discover",
+   "PROFILE": "Profile"
 }

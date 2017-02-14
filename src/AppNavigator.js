@@ -7,6 +7,8 @@ import { Colors } from '@theme';
 
 import Splash from '@containers/Splash';
 import Login from '@containers/Login';
+import Register from '@containers/Login/Register';
+import Home from '@containers/Home';
 
 Navigator.prototype.replaceWithAnimation = function (route) {
   const activeLength = this.state.presentedIndex + 1;
@@ -40,7 +42,7 @@ class AppNavigator extends Component {
     BackAndroid.addEventListener('hardwareBackPress', () => {
       const routes = this._navigator.getCurrentRoutes();
 
-      if (routes[routes.length - 1].id === 'login' || routes[routes.length - 1].id === 'login') {
+      if (routes[routes.length - 1].id === 'login') {
         return false;
       }
       else {
@@ -60,6 +62,10 @@ class AppNavigator extends Component {
         return <Splash navigator={navigator} {...route.passProps} />;
       case 'login':
         return <Login navigator={navigator} {...route.passProps} />;
+      case 'register':
+        return <Register navigator={navigator} {...route.passProps} />;
+      case 'home':
+        return <Home navigator={navigator} {...route.passProps} />;
       default :
         return <Login navigator={navigator} {...route.passProps} />;
     }
@@ -77,7 +83,8 @@ class AppNavigator extends Component {
           ref={(ref) => { this._navigator = ref; }}
           configureScene={(route) => {
             if (route.id === 'splash') return Navigator.SceneConfigs.FadeAndroid;
-            else if (route.id === 'login') return Navigator.SceneConfigs.PushFromRight;
+            else if (route.id === 'login') return Navigator.SceneConfigs.FadeAndroid;
+            else if (route.id === 'register') return Navigator.SceneConfigs.FadeAndroid;
             return Navigator.SceneConfigs.PushFromRight;
           }}
           initialRoute={{ id: (Platform.OS === 'android') ? 'splash' : 'login', statusBarHidden: true }}
