@@ -11,7 +11,8 @@ While I am investigating other senior developers starter kits, I finally summari
 I think this project should be very helpful for everybody who loves React Native.
 
 For now, it only has base structure and doesn't supports realtime chatting features.
-It will be developed soon by me and the developers who wants to contribute to this project.
+
+**It will come soon by me** and the developers who wants to contribute to this project.
 
 Therefore, any good ideas and nice suggestions which can promote this project more better are very welcomed and any PRs are fine too.
 I am really open minded and I would like to hear about other developers suggestions and recommendations.
@@ -63,8 +64,8 @@ I am really open minded and I would like to hear about other developers suggesti
 
 ## TODO
 * Login, Register implementation with firebase.
-* Contact List.
-* 1:1 Realtime Chat.
+* Contact list.
+* 1:1 Realtime chat.
 * Discover friends.
 * My profile management.
 * UI design improvements.
